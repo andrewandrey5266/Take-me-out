@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CubeMovement.cs" />
+     <Compile Include="Assets\Scripts\GenerateLevel.cs" />
+     <Compile Include="Assets\Scripts\MapService.cs" />
      <Compile Include="Assets\Scripts\MobileInput.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
  <Reference Include="UnityEngine.UI">
