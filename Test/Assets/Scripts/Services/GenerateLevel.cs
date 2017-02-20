@@ -5,20 +5,17 @@ using Assets.Scripts;
 public class GenerateLevel : MonoBehaviour
 {
 
-    
-
     void Start()
     {
-        GameField gameField = new GameField(sideSize: 5, obstacleCount: 5, obstacleSize: new int[5], map: new int[0, 0]);
-            
+        GameField gameField = new GameField(sideSize: 5, obstacleCount: 5);            
 
-        var service = new AssemblyCSharp.MapService();
-        service.MapInit(gameField.Map);
-        service.MapPlayer(gameField.Map);
+        var service = new MapService();
+
+        service.MapInit(gameField);
+        service.MapPlayer(gameField);
+        service.MapObstacle(gameField);
 
         service.PrintMap(gameField.Map);
-
-
         CreateObjects(gameField);
     }
     void CreateObjects(GameField gameField)
@@ -31,7 +28,7 @@ public class GenerateLevel : MonoBehaviour
                 {
                     if (gameField.Map[j, g] == i)
                     {
-                        gameField.PushObstacle( j, g, i == 0 ? 2 : gameField.ObstacleSize[i - 1]);
+                        gameField.PushObstacle( j, g, i == 0 ? 2 : gameField.Obstacles[i - 1].Size);
 
                         goto next;
                     }

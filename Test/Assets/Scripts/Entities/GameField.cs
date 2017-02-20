@@ -9,20 +9,18 @@ namespace Assets.Scripts
     public class GameField
     {
         public int SideSize { get; private set; }
-        public int ObstacleCount { get; private set; }
-        public int[] ObstacleSize { get; private set; }
+        public Obstacle[] Obstacles { get; private set; }
         public int[,] Map { get; private set; }
 
-        public List<Obstacle> Obstacles { get; private set; }
 
-        public GameField(int sideSize, int obstacleCount, int[] obstacleSize, int[,] map)
+        public GameField(int sideSize, int obstacleCount)
         {
             this.SideSize = sideSize;
-            this.ObstacleCount = obstacleCount;
-            this.ObstacleSize = obstacleSize;
-            this.Map = map;
+            this.Obstacles = new Obstacle[obstacleCount];;
+            this.Map = new int[sideSize,sideSize];
 
-            Obstacles = new List<Obstacle>();
+            for(int i = 0; i < Obstacles.Length; i++)
+                Obstacles[i] = new Obstacle();
         }
 
         //Move TO SEPARATE SERVICE CLASS
@@ -42,7 +40,7 @@ namespace Assets.Scripts
                 cube.transform.localScale = new Vector3(size, 1, 1);
             }
 
-            Obstacle instance = new Obstacle()
+           /* Obstacle instance = new Obstacle()
             {
                 Id = Obstacles.Count, // hardcode
                 IsVertical = false, // hardcode
@@ -52,7 +50,7 @@ namespace Assets.Scripts
                 yPos = y
             };
 
-            Obstacles.Add(instance);
+            Obstacles.Add(instance);*/
         }
 
         public void InstantiateObstacles()
