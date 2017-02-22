@@ -46,7 +46,6 @@ public class MapService{
 				obstacles [i].Size = 2;
 				if (i % 2 != 0)
 					obstacles [i].Size++;
-			
 			}
 		}
 

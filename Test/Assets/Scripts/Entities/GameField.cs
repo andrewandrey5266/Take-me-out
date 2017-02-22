@@ -56,8 +56,7 @@ namespace Assets.Scripts
         public void InstantiateObstacles()
         {
             //foreach (var obstacle in Obstacles)
-            //    //Instantiate(obstacle);
+            //Instantiate(obstacle);
         }
-
     }
 }

@@ -23,7 +23,6 @@ public class MobileInput : MonoBehaviour {
 	float yMinBoundary = -1;
 	void Start () {
 		transform = GameObject.Find ("Player").GetComponent<Transform> ();
-
 	}
 	
 	// Update is called once per frame
