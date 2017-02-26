@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class GameField
+    public class GameField : MonoBehaviour
     {
         public int SideSize { get; private set; }
         public Obstacle[] Obstacles { get; private set; }

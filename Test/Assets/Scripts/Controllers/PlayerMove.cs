@@ -14,9 +14,9 @@ public class PlayerMove : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
-		transform = GameObject.Find ("Player").GetComponent<Transform> ();
-	}
+	//void Start () {
+	//	transform = GameObject.Find ("Player").GetComponent<Transform> ();
+	//}
 	
 	// Update is called once per frame
 	void Update () {
