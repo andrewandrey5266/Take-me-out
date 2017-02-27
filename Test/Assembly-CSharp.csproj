@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Controllers\CubeMovement.cs" />
      <Compile Include="Assets\Scripts\Controllers\MobileInput.cs" />
      <Compile Include="Assets\Scripts\Controllers\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\Entities\Board.cs" />
      <Compile Include="Assets\Scripts\Entities\GameField.cs" />
      <Compile Include="Assets\Scripts\Entities\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Services\GenerateLevel.cs" />

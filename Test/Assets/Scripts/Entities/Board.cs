@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Board : MonoBehaviour {
+public class Board {
 
     public uint RowNumber;
     public uint ColumnNumber;
@@ -47,16 +47,6 @@ public class Board : MonoBehaviour {
         }
     }
 
-    // Use this for initialization
-    void Start () {
-        Debug.Log("here");
-        uint square = 0;
-        Board test = new Board(square, square);
-        Debug.Log("Now here");
-    }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
+  
+ 
 }

@@ -7,7 +7,12 @@ public class GenerateLevel : MonoBehaviour
 
     void Start()
     {
-        GameField gameField = new GameField(sideSize: 5, obstacleCount: 5);            
+        Debug.Log("here");
+        uint square = 5;
+        Board test = new Board(square, square);
+        Debug.Log("Now here");
+
+       /* GameField gameField = new GameField(sideSize: 5, obstacleCount: 5);            
 
         var service = new MapService();
 
@@ -16,7 +21,7 @@ public class GenerateLevel : MonoBehaviour
         service.MapObstacle(gameField);
 
         service.PrintMap(gameField.Map);
-        CreateObjects(gameField);
+        CreateObjects(gameField);*/
     }
     void CreateObjects(GameField gameField)
     {
