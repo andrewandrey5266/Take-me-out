@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts;
+using System;
+
 public class GenerateLevel : MonoBehaviour
 {
 
@@ -10,6 +12,7 @@ public class GenerateLevel : MonoBehaviour
         int square = 5;
         var test = new Board(square, square);
         test.DrawTiles();
+        
 
     }
  
