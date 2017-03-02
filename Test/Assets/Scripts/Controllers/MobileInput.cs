@@ -51,7 +51,7 @@ public class MobileInput : MonoBehaviour {
 		}
 
 	}
-	void Swipe(){
+	private void Swipe(){
 		Vector2 distance = endPos - startPos;
 		if (Mathf.Abs (distance.x) > Mathf.Abs (distance.y)) {
 			// horizontal swipe
@@ -76,17 +76,3 @@ public class MobileInput : MonoBehaviour {
 		}
 	}
 }
-/*
- if (Input.GetKeyDown (KeyCode.W) && transform.position.y < yMaxBoundary) {
-			transform.position = new Vector2 (transform.position.x, transform.position.y + 1); 
-		}
-		if (Input.GetKeyDown (KeyCode.S) && transform.position.y > yMinBoundary) {
-			transform.position = new Vector2 (transform.position.x, transform.position.y - 1); 
-		}
-		if (Input.GetKeyDown (KeyCode.D) && transform.position.x < xMaxBoundary) {
-			transform.position = new Vector2 (transform.position.x + 1, transform.position.y); 
-		}
-		if (Input.GetKeyDown (KeyCode.A) && transform.position.x > xMinBoundary) {
-			transform.position = new Vector2 (transform.position.x - 1, transform.position.y); 
-		}
- * */
