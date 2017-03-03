@@ -27,24 +27,13 @@ public class Board
         for (int i = 0; i < this.RowNumber; i++)
         {
             white = (i % 2 != 0);
-            //Debug.Log(white + " " + i);
             for (int j = 0; j < this.ColumnNumber; j++)
             {
-                float shiftX = (float)ColumnNumber / 2;
-                float shiftY = (float) RowNumber / 2;
-
-                GameObject seed = null;
-                if (white)
-                    seed = this.WhiteTile;
-                if(!white)
-                    seed = this.BlackTile;
-
-                MonoBehaviour.Instantiate(seed, new Vector3(j - shiftX, i - shiftY, -2), new Quaternion());
-                //Debug.Log("Object instantiated " + i + " " + j + " And is white " + white);
+                MonoBehaviour.Instantiate(white ? this.WhiteTile : this.BlackTile, 
+                    new Vector3(j - (float)ColumnNumber / 2, i - (float)RowNumber / 2, -2), 
+                    new Quaternion());
                 white = !white;
-
             }
-
         }
     }
 
